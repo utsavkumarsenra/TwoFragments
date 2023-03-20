@@ -21,7 +21,7 @@ class SecondFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    lateinit var clickfirst: TextView
+    lateinit var clicksecond: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,9 +36,10 @@ class SecondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var view =inflater.inflate(R.layout.fragment_second, container, false)
-        clickfirst =  view.findViewById(R.id.secondclick)
+        clicksecond =  view.findViewById(R.id.secondclick)
 
-        clickfirst.setOnClickListener {
+        //finding which activity to call from fragment
+        clicksecond.setOnClickListener {
             try {
                 (activity as SecondActivity).secondclicked()
             } catch (e: Exception) {

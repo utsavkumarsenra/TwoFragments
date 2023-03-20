@@ -39,6 +39,7 @@ class FirstFragment : Fragment() {
         var view =inflater.inflate(R.layout.fragment_first, container, false)
         clickfirst =  view.findViewById(R.id.firstclick)
 
+        //finding which activity to call from fragment
         clickfirst.setOnClickListener {
             try {
                 (activity as FirstActivity).firstclicked()
